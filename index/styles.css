@@ -1,32 +1,93 @@
+body {
+    background: url("../assets/index-background.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: "musical-tone";
+    src: local("MusicalTone-7BJ4A.otf"), url("../assets//musical-tone-font/MusicalTone-7BJ4A.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "bitcount-prop-single";
+    src: local("BitcountPropSingle-Regular.ttf"), url("../assets/Bitcount_Prop_Single/static/BitcountPropSingle-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
 @keyframes dance {
     0%, 50%, 100% { rotate: 0deg; }
-    25% { rotate: 30deg; }
-    75% { rotate: -30deg; }
+    25% { rotate: 15deg; }
+    75% { rotate: -15deg; }
 }
 
-/*
-@keyframes heartbeat {
-    0% , 25%, 60%, 100% {
-        color: black;
-        font-size: 1rem;
-    }
-
-    50%, 70% {
-        color: lightseagreen;
-        font-size: calc(1rem + 5px);
-    }
+@keyframes cd-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
-*/
 
 header > h1 {
     text-align: center;
+    font-size: 4rem;
+    font-family: "musical-tone";
+    letter-spacing: 2px;
+    color: #FFFFFF;
+
     animation: dance 2s infinite;
     margin: 50px 0;
 }
 
-main > h2 {
+main {
+    background-color: #FFFFFF;
+
+    margin: 10px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 20px 10px 20px #25d6fa;
+}
+
+.sign-in-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.sonic-cd, .sade-cd {
+    height: 150px;
+    width: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    animation: cd-spin 2s linear infinite;
+    border-radius: 100%;
+}
+
+.sonic-cd > img, .sade-cd > img { border-radius: 100%; }
+
+#sign-in-header {
     text-align: center;
-    /*animation: heartbeat 0.7s infinite;*/
+    font-family: "bitcount-prop-single";
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    margin: 0 40px;
+    
+    color: black; /* Color of the text fill */
+    text-shadow:
+        -1px -1px 0 #25d6fa, /* Top-left shadow */
+        1px -1px 0 #25d6fa, /* Top-right shadow */
+        -1px 1px 0 #25d6fa, /* Bottom-left shadow */
+        1px 1px 0 #25d6fa; /* Bottom-right shadow */
 }
 
 form {
@@ -37,12 +98,28 @@ form {
 }
 
 form > input {
+    font-family: "bitcount-prop-single";
+    font-size: 2rem;
+    text-align: center;
+
     margin: 10px;
-    padding: 5px;
-    border: 2px solid black;
+    padding: 10px;
+
+    border: 2px solid #25d6fa;
     border-radius: 16px;
 }
 
+form > input:focus { outline: none; }
+form > input::placeholder { font-family: "musical-tone"; }
+
+form > input[type="submit"] {
+    border-color: #1860ae;
+    font-family: "musical-tone";
+    background-color: #258cfa;
+    color: #25d6fa;
+}
+
 form > input[type="submit"]:active {
-    background-color: black;
+    background-color: #25d6fa;
+    color: white;
 }

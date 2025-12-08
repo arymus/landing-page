@@ -10,7 +10,6 @@ form.addEventListener("submit", event => {
     };
 
     const accepted = document.createElement("div");
-
     const acceptedStyles = {
         width: "200px",
         height: "100px",
@@ -27,9 +26,7 @@ form.addEventListener("submit", event => {
     if (user.username.toLowerCase() === "arymus" && user.password.toLowerCase() === "duh") {
         alert("Signed in successfully!");
         form.reset();
-        setTimeout(() => {
-            window.location.href = "../landing/index.html";
-        }, 500);
+        setTimeout(() => { window.location.href = "../landing/index.html"; }, 500);
     } else {
         alert("Incorrect credentials!");
         form.reset();
