@@ -113,8 +113,9 @@ form > input:focus { outline: none; }
 form > input::placeholder { font-family: "musical-tone"; }
 
 form > input[type="submit"] {
-    border-color: #1860ae;
-    font-family: "musical-tone";
+    border: 3px solid #1860ae;
+    font-family: "bitcount-prop-single";
+    text-transform: uppercase;
     background-color: #258cfa;
     color: #25d6fa;
 }
