@@ -1,6 +1,12 @@
 @font-face {
     font-family: "musical-tone";
-    src: url("../assets//musical-tone-font/MusicalTone-7BJ4A.otf");
+    src: local("MusicalTone-7BJ4A.otf"), url("../assets//musical-tone-font/MusicalTone-7BJ4A.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "cause";
+    src: local("Cause-Regular.ttf"), url("../assets/Cause/static/Cause-Regular.ttf") format("truetype");
     font-weight: normal;
 }
 
@@ -23,9 +29,18 @@ header {
     align-items: center;
 }
 
+nav > a {
+    font-family: "cause";
+    font-size: 1.5rem;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav > a:hover { text-decoration: underline; }
+
 #main-header {
     font-family: "musical-tone";
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     letter-spacing: 5px;
 }
@@ -34,6 +49,8 @@ header {
     height: 200px;
     width: 100vw;
     background: url("../assets/");
+    border: 2px solid;
+    margin: 20px 0;
 }
 
 #about-me {
@@ -43,24 +60,32 @@ header {
     align-items: center;
 }
 
-.my-text > h1 {
-    font-size: 3rem;
-    font-family: "musical-tone";
-    text-transform: uppercase;
-    transform: rotate(-90deg);
-
-    margin: 10px;
-}
-
 .my-text {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    width: 70vw;
+    margin: 20px;
+}
+
+.my-text > h1, #skills > h1 {
+    font-size: 3rem;
+    font-family: "musical-tone";
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    transform: rotate(-90deg);
+}
+
+.my-text > p {
+    text-align: center;
+    font-family: "cause";
+    font-size: 1.5rem;
 }
 
 .my-photos {
-    margin: 20px;
+    margin: 50px;
     padding: 10px;
 
     display: flex;
@@ -68,8 +93,19 @@ header {
     justify-content: space-around;
     align-items: center;
 }
-.photo {
+
+.my-photos > img {
     height: 200px;
     width: 300px;
     margin: 0 15px;
 }
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img:nth-child(1) { transform: rotate(-20deg); }
+img:nth-child(3) { transform: rotate(20deg); }
