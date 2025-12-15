@@ -46,11 +46,8 @@ nav > a:hover { text-decoration: underline; }
 }
 
 .staff {
-    height: 200px;
+    height: 300px;
     width: 100vw;
-    background: url("../assets/");
-    border: 2px solid;
-    margin: 20px 0;
 }
 
 #about-me {
@@ -84,6 +81,11 @@ nav > a:hover { text-decoration: underline; }
     font-size: 1.5rem;
 }
 
+h2 {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .my-photos {
     margin: 50px;
     padding: 10px;
@@ -95,9 +97,12 @@ nav > a:hover { text-decoration: underline; }
 }
 
 .my-photos > img {
-    height: 200px;
-    width: 300px;
-    margin: 0 15px;
+    height: 250px;
+    width: 200px;
+    margin: 0 30px;
+
+    border: 20px solid #e36c6c;
+    border-radius: 6px;
 }
 
 #skills {
