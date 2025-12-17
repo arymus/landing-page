@@ -32,11 +32,19 @@ header {
     align-items: center;
 }
 
+nav {
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 100vw;
+    border-bottom: 2px solid black;
+}
+
 nav > a {
     font-family: "cause";
     font-size: 1.5rem;
     margin: 10px;
     text-decoration: none;
+    color: black;
 }
 
 nav > a:hover { text-decoration: underline; }
@@ -46,6 +54,7 @@ nav > a:hover { text-decoration: underline; }
     font-size: 4rem;
     text-align: center;
     letter-spacing: 5px;
+    color: #FFFFFF;
 }
 
 .staff {
@@ -70,12 +79,13 @@ nav > a:hover { text-decoration: underline; }
     margin: 20px;
 }
 
-.my-text > h1, #skills > h1 {
+.my-text > h1, #skills > h1 { transform: rotate(-90deg); }
+
+section > h1 {
     font-size: 3rem;
     font-family: "musical-tone";
     text-transform: uppercase;
     text-wrap: nowrap;
-    transform: rotate(-90deg);
     letter-spacing: 5px;
     color: #FFFFFF;
 }
@@ -111,6 +121,9 @@ h2 {
     border: 20px solid #FFFFFF;
     border-radius: 6px;
 }
+
+img:nth-child(1) { transform: rotate(-20deg); }
+img:nth-child(3) { transform: rotate(20deg); }
 
 #skills {
     display: flex;
@@ -149,5 +162,4 @@ td, th {
 
 progress[value] { padding: 10px; }
 
-img:nth-child(1) { transform: rotate(-20deg); }
-img:nth-child(3) { transform: rotate(20deg); }
+#projects > h1 { text-align: center; }
