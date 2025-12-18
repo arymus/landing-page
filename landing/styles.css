@@ -10,7 +10,8 @@
     font-weight: normal;
 }
 
-body {
+body, html {
+    scroll-behavior: smooth;
     height: 100vh;
     width: 100vw;
 
@@ -50,8 +51,9 @@ nav > a:hover { text-decoration: underline; }
 
 #main-header {
     font-family: "musical-tone";
-    font-size: 4rem;
+    font-size: 10rem;
     text-align: center;
+    margin-bottom: 0;
     letter-spacing: 5px;
     color: #FFFFFF;
 
@@ -80,11 +82,15 @@ nav > a:hover { text-decoration: underline; }
     justify-content: space-around;
     align-items: center;
 
-    width: 70vw;
-    margin: 20px;
+    background-color: #FFFFFF;
+    border: 3px dashed #000000;
+    border-radius: 20px;
+    padding: 50px;
+
+    width: 60vw;
 }
 
-.my-text > h1, #skills > h1 { transform: rotate(-90deg); }
+.my-text > h1 { transform: rotate(-90deg); }
 
 section > h1, .my-text > h1 {
     font-size: 3rem;
@@ -92,20 +98,20 @@ section > h1, .my-text > h1 {
     text-transform: uppercase;
     text-wrap: nowrap;
     letter-spacing: 5px;
-    color: #FFFFFF;
+    color: #000000;
 }
 
 .my-text > p {
     text-align: center;
     font-family: "cause";
     font-size: 1.5rem;
-    color: #FFFFFF;
+    color: #000000;
 }
 
 h2 {
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: #FFFFFF;
+    color: #000000;
 }
 
 .my-photos {
@@ -132,10 +138,12 @@ img:nth-child(3) { transform: rotate(20deg); }
 
 #skills {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+#skills > *, .skill-tables > * { color: #FFFFFF; }
 
 .skill-tables {
     display: flex;
@@ -167,7 +175,10 @@ td, th {
 
 progress[value] { padding: 10px; }
 
-#projects > h1 { text-align: center; }
+#projects > h1 {
+    text-align: center;
+    color: #FFFFFF;
+}
 
 .logo {
     height: 100px;
@@ -180,3 +191,27 @@ progress[value] { padding: 10px; }
     overflow-x: scroll;
 }
 
+.repo {
+    height: 300px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+
+    margin: 10px;
+    border: 2px solid #000000;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.repo > a {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "cause";
+    text-decoration: none;
+    color: #6BB5FF; 
+}
+
+.repo > a:hover { text-decoration: underline; }

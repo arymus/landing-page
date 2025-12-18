@@ -38,22 +38,6 @@ async function displayRepos() {
         const repoContainer = document.createElement("div");
         repoContainer.classList.add("repo"); // Give the div a class of .repo
 
-        // Styles for the repository container
-        const repoContainerStyles = {
-            backgroundColor: "#FFFFFF",
-            margin: "20px",
-            padding: "10px",
-            border: "2px solid #000000",
-            borderRadius: "16px",
-
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-        }
-
-        Object.assign(repoContainer.style, repoContainerStyles);
-
         const repoInfo = { // Create an object with information from the API
             name: parseName(repo.name),
             desc: repo.description,
@@ -64,12 +48,14 @@ async function displayRepos() {
         const nameText = document.createElement("a");
         nameText.innerText = repoInfo.name;
         nameText.href = repoInfo.url;
+        nameText.target = "_blank";
 
         const descText = document.createElement("p");
         descText.innerText = repoInfo.desc === null ? "[No description]" : repoInfo.desc; // If the repository has no description is null (has no desc), then put [No description]. If else, put the description
 
         const langText = document.createElement("p");
         langText.classList.add("langs"); // Add a class of .langs to the p element
+        langText.innerText = "Languages: ";
         for (i in repoInfo.lang) langText.innerText += repoInfo.lang[i] + ", ";  // Add the language to the element's innerText (plus a comma)
 
         // Append all the newly made elements to the repo container and then append the repo container to the projects section
