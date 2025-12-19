@@ -32,3 +32,6 @@ form.addEventListener("submit", event => {
         form.reset();
     }
 });
+
+document.querySelector(".sonic-cd").addEventListener("click", () => alert("Username: arymus"));
+document.querySelector(".sade-cd").addEventListener("click", () => alert("Password: duh"));
