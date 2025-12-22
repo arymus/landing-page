@@ -1,0 +1,31 @@
+@media (width <= 576px) {
+    .my-text {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .my-text > h1 {
+        transform: none;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .my-text > p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .my-photos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-photos > img {
+        transform: none;
+        margin: 15px 0;
+    }
+
+    .staff { height: 200px; }
+}
